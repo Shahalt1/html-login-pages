@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page with Hexagon Box</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F4F4F4; /* Whitish gray background color */
+            color: #596FB7; /* Text color */
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .hexagon-container {
+            position: relative;
+            width: 200px;
+            height: 115.47px; /* Height is calculated as half the square root of 3 times the width */
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            background-color: #C6CF9B; /* Hexagon color */
+            margin: 0 auto;
+        }
+
+        form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+            background-color: #C6CF9B; /* Login box color */
+        }
+
+        h2 {
+            color: #11235A; /* Text color */
+        }
+
+        label {
+            display: block;
+            margin: 20px 0 8px 0;
+            color: #11235A; /* Text color */
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #11235A; /* Text color */
+            border-radius: 4px;
+            background-color: white; /* Text box color */
+            color: #11235A; /* Text color */
+        }
+
+        button {
+            background-color: #11235A; /* Text color */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #596FB7; /* Text color */
+        }
+
+        .footer {
+            margin-top: 20px;
+            color: #11235A; /* Text color */
+        }
+
+        a {
+            color: #11235A; /* Text color */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hexagon-container"></div>
+
+    <form>
+        <h2>Sign in</h2>
+        <label for="username">Email or Phone:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Sign in</button>
+
+        <p class="footer">New to HTML? <a href="#">Join now</a></p>
+    </form>
+
+</body>
+</html>
